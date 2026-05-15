@@ -42,7 +42,11 @@ npm run dev
 ### 5. Chạy bằng Docker
 
 ```bash
+# Linux
 sudo docker compose up -d --build
+
+# Windows/Mac (Docker Desktop)
+docker compose up -d --build
 ```
 Hệ thống sẽ tự động khởi tạo cơ sở dữ liệu (nạp sẵn file `init.sql`)
 Chạy frontend tại: `http://localhost:3000`
