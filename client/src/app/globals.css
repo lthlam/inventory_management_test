@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  min-height: 100vh;
+}
+
+@layer components {
+  .table-frame {
+    border-radius: 0;
+  }
+
+  .table-grid {
+    border-collapse: collapse;
+  }
+
+  .table-grid :is(th, td) {
+    border-right: 1px solid rgb(71 85 105 / 0.45);
+    border-bottom: 1px solid rgb(255 255 255 / 0.08);
+  }
+
+  .table-grid :is(th, td):last-child {
+    border-right: 0;
+  }
+
+  .table-grid tbody tr:last-child td,
+  .table-grid tfoot tr:last-child td {
+    border-bottom: 0;
+  }
+}
+
+/* Hide number input spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+@media print {
+  .table-grid :is(th, td) {
+    border-color: rgb(203 213 225);
+  }
+}
