@@ -54,6 +54,13 @@ sudo docker compose down -v
 sudo docker compose up -d
 ```
 
+### 6. Chạy kiểm thử (Testing)
+Để chạy test tự động cho Backend:
+```bash
+cd server
+npm test
+```
+
 ## Cấu trúc Cơ sở Dữ liệu
 
 Hệ thống sử dụng PostgreSQL. Dưới đây là Sơ đồ thực thể quan hệ (ERD):
