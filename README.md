@@ -44,11 +44,10 @@ npm run dev
 ```bash
 sudo docker compose up -d --build
 ```
-Hệ thống sẽ tự động khởi tạo cơ sở dữ liệu (nạp sẵn file `init.sql`) và chạy:
-- Frontend tại: `http://localhost:3000`
-- Backend tại nội bộ (và map ra ngoài ở port `3001` nếu cần)
+Hệ thống sẽ tự động khởi tạo cơ sở dữ liệu (nạp sẵn file `init.sql`)
+Chạy frontend tại: `http://localhost:3000`
 
-*Nếu bạn muốn thiết lập lại Database từ đầu (xóa sạch dữ liệu), hãy chạy:*
+*Để thiết lập lại Database từ đầu (xóa sạch dữ liệu), hãy chạy:*
 ```bash
 sudo docker compose down -v
 sudo docker compose up -d
@@ -198,7 +197,7 @@ Các bảng chính sau:
 - **Tổ chức**: `division` (Đơn vị), `department` (Bộ phận).
 - **Danh mục**: `suppliers` (Nhà cung cấp), `warehouses` (Kho), `products` (Vật tư), `deliverers` (Người giao).
 - **Nghiệp vụ Nhập kho**:
-  - `warehouse_receipts`: Thông tin chung của phiếu nhập (Số phiếu, ngày nhập, đối tác...).
+  - `warehouse_receipts`: Thông tin chung của phiếu nhập (Số phiếu, ngày nhập, nhà cung cấp, tài khoản nợ, tài khoản có...).
   - `warehouse_receipt_items`: Chi tiết từng mặt hàng trong phiếu nhập.
 - **Tồn kho & Giao dịch**:
   - `product_stocks`: Lưu trữ số lượng tồn thực tế của vật tư theo từng kho.
